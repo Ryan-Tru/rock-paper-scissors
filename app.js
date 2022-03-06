@@ -1,3 +1,7 @@
+//To keep track of the scores.
+let PlayerScore = 0;
+let CompScore = 0;
+
 //Makes the computer select a random element
 function computerPlay() {
     const rockPaperScissors = ["Rock", "Paper", "Scissors"];
