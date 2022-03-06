@@ -53,6 +53,7 @@ function game() {
         rockPaperScissorsGame(playerSelection, computerPlay());
         console.log(playerScoreGlobal, compScoreGlobal);
     }
+    
     if(playerScoreGlobal > compScoreGlobal) {
         console.log("You won the game :) congrats");
     } else if (compScoreGlobal > playerScoreGlobal){
