@@ -1,6 +1,6 @@
 //score variables
-playerScore = 0;
-compScore = 0;
+playerScoreGlobal = 0;
+compScoreGlobal = 0;
 
 //Makes the computer select a random element
 function computerPlay() {
@@ -11,6 +11,7 @@ function computerPlay() {
 
 //Checks if the player wins or loses based on the rules.
 function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
+    
     playerSelectionGame = playerSelectionGame.toLowerCase();
 
     computerSelection = computerSelection.toLowerCase();
@@ -22,23 +23,34 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     let nothing = `Nothing happened ${playerSelectionGame} and ${computerSelection} cancel eachother`;
 
     if(playerSelectionGame == computerSelection) {
-        return nothing;
+        console.log(nothing);
     } else if(playerSelectionGame == "paper" && computerSelection == "rock") {
-        return win;
+        playerScoreGlobal++;
+        console.log(win);
     } else if(playerSelectionGame == "paper" && computerSelection == "scissors") {
-        return lose;
+        compScoreGlobal++;
+        console.log(lose);
     } else if(playerSelectionGame == "rock" && computerSelection == "scissors") {
-        return win;
+        playerScoreGlobal++;
+        console.log(win);
     } else if(playerSelectionGame == "rock" && computerSelection == "paper") {
-        return lose;
+        compScoreGlobal++;
+        console.log(lose);
     } else if(playerSelectionGame == "scissors" && computerSelection == "paper") {
-        return win;
+        playerScoreGlobal++;
+        console.log(win);
     } else if(playerSelectionGame == "scissors" && computerSelection == "rock") {
-        return lose;
+        compScoreGlobal++;
+        console.log(lose);
+    }
+    return;
+}
+
+function game(playerScore, computerScore) {
+    for(let i = 0; i < 5; i++) {
+        playerSelection = prompt("Enter Your Selection (Rock, Paper, Scissors):");
+        rockPaperScissorsGame(playerSelection, computerPlay());
     }
 }
 
-//Prompts player to select 
-playerSelection = prompt("Enter Your Selection (Rock, Paper, Scissors):");
-
-rockPaperScissorsGame(playerSelection, computerPlay());
+game(playerScoreGlobal, compScoreGlobal);
