@@ -1,3 +1,6 @@
+//score variables
+playerScore = 0;
+compScore = 0;
 
 //Makes the computer select a random element
 function computerPlay() {
@@ -7,7 +10,7 @@ function computerPlay() {
 }
 
 //Checks if the player wins or loses based on the rules.
-function rockPaperScissorsGame(playerSelectionGame, computerSelection, playerScore, compScore) {
+function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     playerSelectionGame = playerSelectionGame.toLowerCase();
 
     computerSelection = computerSelection.toLowerCase();
