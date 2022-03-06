@@ -1,9 +1,11 @@
+//Makes the computer select a random element
 function computerPlay() {
     const rockPaperScissors = ["Rock", "Paper", "Scissors"];
 
     return rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)];
 }
 
+//Checks if the player wins or loses based on the rules.
 function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     playerSelectionGame = playerSelectionGame.toLowerCase();
 
@@ -32,6 +34,7 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     }
 }
 
+//Prompts player to select 
 playerSelection = prompt("Enter Your Selection (Rock, Paper, Scissors):");
 
 rockPaperScissorsGame(playerSelection, computerPlay());
