@@ -16,9 +16,9 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
 
     computerSelection = computerSelection.toLowerCase();
 
-    let win = `You win. ${playerSelectionGame} beats ${computerSelection}`;
+    let win = `Yay! You won :) ${playerSelectionGame} beats ${computerSelection}`;
 
-    let lose = `You lose. ${computerSelection} beats ${playerSelectionGame}`;
+    let lose = `You lost :( ${computerSelection} beats ${playerSelectionGame}`;
 
     let nothing = `Nothing happened ${playerSelectionGame} and ${computerSelection} cancel eachother`;
 
@@ -46,11 +46,18 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     return;
 }
 
-function game(playerScore, computerScore) {
+function game() {
     for(let i = 0; i < 5; i++) {
+        console.log("Round " + [i]);
         playerSelection = prompt("Enter Your Selection (Rock, Paper, Scissors):");
         rockPaperScissorsGame(playerSelection, computerPlay());
+        console.log(playerScoreGlobal, compScoreGlobal);
+    }
+    if(playerScoreGlobal > compScoreGlobal) {
+        console.log("You won the game :) congrats");
+    } else if (compScoreGlobal > playerScoreGlobal){
+        console.log("You lost the game :(");
     }
 }
 
-game(playerScoreGlobal, compScoreGlobal);
+game();
