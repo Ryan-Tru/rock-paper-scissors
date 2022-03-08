@@ -48,19 +48,5 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     return;
 }
 
-function game() {
-    for(let i = 0; i < 5; i++) {
-        console.log("Round " + [i]);
-        playerSelection = prompt("Enter Your Selection (Rock, Paper, Scissors):");
-        rockPaperScissorsGame(playerSelection, computerPlay());
-        console.log(playerScoreGlobal, compScoreGlobal);
-    }
-    
-    if(playerScoreGlobal > compScoreGlobal) {
-        console.log("You won the game :) congrats");
-    } else if (compScoreGlobal > playerScoreGlobal){
-        console.log("You lost the game :(");
-    }
-}
 
 game();
