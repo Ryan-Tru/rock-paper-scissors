@@ -42,6 +42,8 @@ function rockPaperScissorsGame(playerSelectionGame, computerSelection) {
     } else if(playerSelectionGame == "scissors" && computerSelection == "rock") {
         compScoreGlobal++;
         console.log(lose);
+    } else {
+        console.log("Please enter a valid value.");
     }
     return;
 }
