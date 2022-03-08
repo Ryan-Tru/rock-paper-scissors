@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --grey: rgb(95, 95, 95);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--grey); 
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.header-container {
+    top: 0;
+    text-align: center;
+    color: white;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.heading {
+    margin: 0;
+}
+
+.player-comp-score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player-heading {
+    margin-left: 90px;
+}
+
+.computer-heading {
+    margin-right: 70px;
+}
+
+.score-tally {
+    width: 150px;
+    height: 50px;
+    border: 1px black solid;
+    margin-left: 45px;
+}
+
+.player-comp-score h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.shapes {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.shapes p {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.box {
+    border: 3px black solid;
+    width: 350px;
+    height: 300px;
+}
+
+.win-loss-message {
+    height: 70px;
+    
+}
+
+.shape-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.button {
+    padding: 2em;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.1s;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    background-color: rgb(202, 202, 202);
+}
+
+.fa-solid {
+    font-size: 3em;
+}
+
+
