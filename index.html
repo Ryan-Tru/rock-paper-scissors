@@ -20,27 +20,31 @@
     <div class="player-comp-score">
         <h2 class="player-heading">Player</h2>
 
-        <div class="score-tally"></div>
+        <div class="score-tally-container">
+            <div class="player-score-container"><p class="player-score"></p></div>
+            <p>:</p>
+            <div class="comp-score-container"><p class="comp-score"></p></div>
+        </div>
 
         <h2 class="computer-heading">Computer</h2>
     </div>
 
     <div class="shapes">
-        <div class="player-shape box"></div>
+        <div class="player-shape-box box"><p class="player-shape"></p></div>
 
         <p>VS</p>
 
-        <div class="comp-shape box"></div>
+        <div class="comp-shape-box box"><p class="comp-shape"></p></div>
     </div>
 
-    <div class="win-loss-message">
-
+    <div class="win-loss-container">
+        <p class="win-loss-message"></p>
     </div>
 
     <div class="shape-buttons">
-        <button class="button" id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="button" id="paper"><i class="fa-solid fa-hand"></i></button>
-        <button class="button" id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+        <button class="button" data-selection="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+        <button class="button" data-selection="paper"><i class="fa-solid fa-hand"></i></button>
+        <button class="button" data-selection="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
     </div>
 
     <script src="/app.js"></script>

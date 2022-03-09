@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --grey: rgb(95, 95, 95);
+    --grey: rgb(119, 119, 119);
 }
 
 * {
@@ -44,11 +44,15 @@ body {
     margin-right: 70px;
 }
 
-.score-tally {
+.score-tally-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
     width: 150px;
     height: 50px;
-    border: 1px black solid;
-    margin-left: 45px;
+    border: 2px black solid;
 }
 
 .player-comp-score h2 {
@@ -69,15 +73,23 @@ body {
 }
 
 .box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     border: 3px black solid;
     width: 350px;
     height: 300px;
 }
 
-.win-loss-message {
+.win-loss-container {
+    text-align: center;
     height: 70px;
-    
 }
+
+.win-loss-message {
+    font-weight: 700;
+}
+
 
 .shape-buttons {
     display: flex;
